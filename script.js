@@ -1,4 +1,8 @@
-// This function calling self
-(function selfInvoke() {
-  document.write("I'm Self invoke");
-})();
+// ==> function Expression <==
+function age(x) {
+  document.write(x);
+}
+// --> passing function in variable <--
+var myAge = age;
+myAge(25);
+
