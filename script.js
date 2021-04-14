@@ -1,10 +1,11 @@
-function factorial(y) {  // 4! = 4 * (4-1) * (4-2) * (4-3)
-  if (y === 0 || y === 1) {
-    return 1;
-  } else {
-    return y * factorial(y - 1);
-  }
+function changeValue(a) {
+  console.log(a); //2: print 20;
+  a = 10;
+  console.log(a); //3: print 10;
+  return a;
 }
+var a = 20;
+console.log(a); //1: print 20;
 
-var ans = factorial(4);
-document.write("answer = " + ans);
+changeValue(a);
+console.log(a); //4: print 10;
