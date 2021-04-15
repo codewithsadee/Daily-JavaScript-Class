@@ -1,10 +1,9 @@
 function array() {
-  var numbers = [10, 27, 30, 40, 59, 60, 73, 80, 90];
+  var numbers = [0, 27, 30, 40, 59, 60, 73, 80, 90];
   numbers.push(99);
-  var sum = 0;
-  for (var x = 0; x < 10; x++) {
+  for (var x = 1; x < 10; x++) {
     if (numbers[x] % 2 == 0) {
-      sum += numbers[x];
+      numbers[0] += numbers[x];
       document.write(
         'This is Even numbers <span class="even">' + numbers[x] + "</span><br>"
       );
@@ -14,7 +13,7 @@ function array() {
       );
     }
   }
-  document.write('All Even equal to = <span class="even">' + sum + "</span>");
+  document.write('All Even equal to = <span class="even">' + numbers[0] + "</span>");
 }
 
 array();
