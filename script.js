@@ -1,30 +1,29 @@
-"use strict";
+//* adding nodeJs modules for prompt <==//
+"use srtict";
 const ps = require("prompt-sync");
 const prompt = ps();
 
-var a = Number(prompt("Enter a number : "));
-var c = prompt("Choose operation : ");
+//* creating array for UI storing <==//
+var array = [];
+array.push(Number(prompt("Enter number : "))); //! array[0]
+array.push(prompt("Enter any operator : ")); //! array[1]
+array.push(Number(prompt("Enter another number : "))); //! array[2]
 
-function addition(a, c, b) {
-  if (a == 0 || a == NaN) {
-    console.log("Final result = " + b);
-  } else {
-    if (c == "+") {
-      b += a;
-    } else if (c == "-") {
-      b -= a;
-    } else if (c == "*") {
-      b *= a;
-    } else if (c == "/") {
-      b /= a;
-    } else if (c == "%") {
-      b %= a;
-    }
-    console.log(b);
-    a = Number(prompt("Enter a number : "));
-    c = prompt("Choose operation : ");
-    addition(a, c, b);
-  }
+//* create condition for arithmetic opetor <==//
+if (array[1] == "+") {
+  array.push(array[0] + array[2]); //! array[3]
+} else if (array[1] == "-") {
+  array.push(array[0] - array[2]); //! array[3]
+} else if (array[1] == "*") {
+  array.push(array[0] * array[2]); //! array[3]
+} else if (array[1] == "/") {
+  array.push(array[0] / array[2]); //! array[3]
+} else if (array[1] == "%") {
+  array.push(array[0] % array[2]); //! array[3]
+} else {
+  console.log("! Operation Error !");
+  console.log("Please make sure you choose any of this operator : + - * / %");
 }
 
-addition(a, c, 0);
+//* print result value <==//
+console.log("result : " + array[0] + array[1] + array[2] + " = " + array[3]);
