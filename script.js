@@ -8,7 +8,7 @@ var arr = [20, 50, 11, 500, 100];
 
 //* This function checking requirement <== //
 function pushArry(b) {
-  if (b < 20) { //! if userInput less than 20, function re-called <== //
+  if (!(b > 20)) { //! if userInput less than 20, function re-called <== //
     console.log("don't input less then 20 ");
     pushArry(Number(prompt("Re-enter the number : ")));
   } else { //! pushing userInput in array <== //
