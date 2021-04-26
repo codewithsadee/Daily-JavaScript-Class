@@ -3,23 +3,18 @@
 const ps = require("prompt-sync");
 const prompt = ps();
 
-var objectValue = [];
-for (var x = 0; x < 5; x++) {
-  if (x == 0) {
-    objectValue.push(prompt("Enter your name : "));
-  } else if (x == 1) {
-    objectValue.push(prompt("Enter your age : "));
-  } else if (x == 2) {
-    objectValue.push(prompt("Enter your country : "));
-  } else if (x == 3) {
-    objectValue.push(prompt("Enter your language : "));
-  }
+var objectProparty = [];
+var promptMessage = ["Name : ", "Age : ", "Country : ", "Language : "];
+
+for (var i = 0; i < promptMessage.length; i++) {
+  objectProparty.push(prompt(promptMessage[i]));
 }
+
 var person = {
-  name: objectValue[0],
-  age: objectValue[1],
-  country: objectValue[2],
-  language: objectValue[3],
+  name: objectProparty[0],
+  age: objectProparty[1],
+  country: objectProparty[2],
+  language: objectProparty[3],
 };
+
 console.log(person);
-console.log(person.language);
