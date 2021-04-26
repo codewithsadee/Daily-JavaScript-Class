@@ -3,20 +3,47 @@
 const ps = require("prompt-sync");
 const prompt = ps();
 
-//* declear an array <== //
-var arr = [20, 50, 11, 500, 100];
+//* creating array with some numbers
+var someNumbers = [
+  50,
+  1,
+  3,
+  4,
+  7,
+  9,
+  15,
+  13,
+  16,
+  11,
+  20,
+  28,
+  24,
+  23,
+  21,
+  37,
+  39,
+  31,
+  34,
+  49,
+  45,
+  42,
+  46,
+];
 
-//* This function checking requirement <== //
-function pushArry(b) {
-  if (!(b > 20)) { //! if userInput less than 20, function re-called <== //
-    console.log("don't input less then 20 ");
-    pushArry(Number(prompt("Re-enter the number : ")));
-  } else { //! pushing userInput in array <== //
-    arr.push(b);
+//* filtering array numbers with while loop
+var i = 0;
+while (i < someNumbers.length) {
+  if (someNumbers[i] <= 50 && someNumbers[i] >= 30) {
+    i++;
+  } else {
+    someNumbers.splice(i, 1);
   }
 }
-pushArry(Number(prompt("Enter a Number : ")));
-arr.sort(function (a, b) {
+
+//* sorting array numbers
+someNumbers.sort(function (a, b) {
   return a - b;
 });
-console.log(arr);
+
+//* printing array numbers
+console.log(someNumbers);
