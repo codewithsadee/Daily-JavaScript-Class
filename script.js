@@ -3,28 +3,23 @@
 const ps = require("prompt-sync");
 const prompt = ps();
 
-var country1 = {
-  name: "Bangladesh",
-  currency: "Taka",
-  population: "161,376,708",
-  callingCode: "+880",
+var objectValue = [];
+for (var x = 0; x < 5; x++) {
+  if (x == 0) {
+    objectValue.push(prompt("Enter your name : "));
+  } else if (x == 1) {
+    objectValue.push(prompt("Enter your age : "));
+  } else if (x == 2) {
+    objectValue.push(prompt("Enter your country : "));
+  } else if (x == 3) {
+    objectValue.push(prompt("Enter your language : "));
+  }
+}
+var person = {
+  name: objectValue[0],
+  age: objectValue[1],
+  country: objectValue[2],
+  language: objectValue[3],
 };
-
-var country2 = {
-  name: "India",
-  currency: "Rupee",
-  population: "1,161,376,708",
-  callingCode: "+99",
-};
-
-
-console.log("");
-console.log("Name : " + country1.name);
-console.log("Currency : " + country1.currency);
-console.log("Population : " + country1.population);
-console.log("Calling code : " + country1.callingCode);
-console.log("");
-console.log("Name : " + country2.name);
-console.log("Currency : " + country2.currency);
-console.log("Population : " + country2.population);
-console.log("Calling code : " + country2.callingCode);
+console.log(person);
+console.log(person.language);
