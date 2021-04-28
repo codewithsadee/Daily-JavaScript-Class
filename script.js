@@ -3,18 +3,31 @@
 const ps = require("prompt-sync");
 const prompt = ps();
 
-var objectProparty = [];
-var promptMessage = ["Name : ", "Age : ", "Country : ", "Language : "];
+//* adding function constractor <== //
+function Constructor(a, b, x) {
+  this.a = a;
+  this.b = b;
+  this.x = x;
 
-for (var i = 0; i < promptMessage.length; i++) {
-  objectProparty.push(prompt(promptMessage[i]));
+  this.print = function () {
+    console.log(this.a);
+    console.log(this.b);
+    console.log(this.x);
+  };
 }
 
-var person = {
-  name: objectProparty[0],
-  age: objectProparty[1],
-  country: objectProparty[2],
-  language: objectProparty[3],
-};
+//* array for userInput <== //
+var arr = [];
 
-console.log(person);
+//* This loop for multiple userInput <== //
+for (var i = 0; i < 3; i++) {
+  arr.push(Number(prompt("Enter a number : ")));
+}
+arr.sort(function (a, b) {
+  return a - b;
+});
+
+//* Calling constructor object (function) store in a variable <==//
+var value = new Constructor(arr[0], arr[1], arr[2]);
+
+value.print();
