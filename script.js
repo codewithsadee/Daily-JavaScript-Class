@@ -3,31 +3,27 @@
 const ps = require("prompt-sync");
 const prompt = ps();
 
-//* adding function constractor <== //
-function Constructor(a, b, x) {
-  this.a = a;
-  this.b = b;
-  this.x = x;
-
-  this.print = function () {
-    console.log(this.a);
-    console.log(this.b);
-    console.log(this.x);
-  };
+function DB(username, email, password) {
+  this.username = username;
+  this.email = email;
+  this.password = password;
 }
 
-//* array for userInput <== //
-var arr = [];
+const user1 = new DB("tokee24", "tokeeabdullah5@gmail.com", "mdtokee892238");
+const user2 = new DB(
+  "codewithsadee",
+  "mohammadsadee24@gmail.com",
+  "mdsadee404305"
+);
 
-//* This loop for multiple userInput <== //
-for (var i = 0; i < 3; i++) {
-  arr.push(Number(prompt("Enter a number : ")));
+var userName = prompt("Username : ");
+var passWord = prompt("Password : ");
+
+if (
+  (userName == user1.username || userName == user2.username) &&
+  (passWord == user1.password || passWord == user2.password)
+) {
+  console.log("Welcome " + userName);
+} else {
+  console.log("! INFORMATION ERROR");
 }
-arr.sort(function (a, b) {
-  return a - b;
-});
-
-//* Calling constructor object (function) store in a variable <==//
-var value = new Constructor(arr[0], arr[1], arr[2]);
-
-value.print();
