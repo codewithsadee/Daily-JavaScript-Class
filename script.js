@@ -3,6 +3,7 @@
 const ps = require("prompt-sync");
 const prompt = ps();
 
+//* 1st way to declare object <==//
 var object1 = new Object();
 object1.name = "Mohammad sadee";
 object1.email = "mohammadsadee24@gmail.com";
@@ -11,6 +12,7 @@ object1.print = function () {
   console.log(object1.email);
 };
 
+//* 2nd way to declare object <==//
 var object2 = {
   name: "Mohammad sadee",
   email: "mohammadsadee24@gamil.com",
@@ -21,6 +23,7 @@ var object2 = {
   },
 };
 
+//* Object Template : creating for multiObject handling <==//
 function objects(name, email) {
   this.name = name;
   this.email = email;
