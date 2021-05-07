@@ -3,11 +3,24 @@
 const ps = require("prompt-sync");
 const prompt = ps();
 
-//* max Math object class <== //
+var winRate = 0;
+var loss = 0;
+for (var x = 1; x < 6; x++) {
+  var userGuess = parseInt(prompt("Guess the lucky number 1 to 5 : "));
+  var random = Math.floor(Math.random() * 5) + 1;
 
-var arr = [20, 30, 10, 33];
-
-function max(num1, num2, num3, num4) {
-  return Math.max(num1, num2, num3, num4);
+  if (random == userGuess) {
+    winRate++;
+    console.log("Exilent! your lucky number is right");
+  } else {
+    loss++;
+    console.log("Your lucky number is wrong!");
+  }
 }
-console.log(max(arr[0], arr[1], arr[2], arr[3]));
+if (winRate > loss) {
+  console.log();
+  console.log("WON!");
+} else {
+  console.log();
+  console.log("Failed try again!");
+}
