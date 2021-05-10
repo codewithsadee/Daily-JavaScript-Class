@@ -12,15 +12,25 @@ for (var x = 1; x < 6; x++) {
   if (random == userGuess) {
     winRate++;
     console.log("Exilent! your lucky number is right");
+    console.log();
   } else {
     loss++;
     console.log("Your lucky number is wrong!");
+    console.log("Lucky Number was --> " + random);
+    console.log();
   }
 }
 if (winRate > loss) {
   console.log();
-  console.log("WON!");
+  console.log("<===> WON! <===>");
+  console.log();
+  console.log("Right :> " + winRate + " Times");
+  console.log("Wrong :> " + loss + " Times");
 } else {
   console.log();
-  console.log("Failed try again!");
+  console.log("<===> Lose! <===>");
+  console.log();
+  console.log("Right :> " + winRate + " Times");
+  console.log("Wrong :> " + loss + " Times");
+  console.log("Better luck next time!");
 }
