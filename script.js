@@ -1,41 +1,36 @@
-var clock = new Date();
-var hours = clock.getHours();
-var minutes = clock.getMinutes();
-var seconds = clock.getSeconds();
-var amPm = hours > 12 ? "pm" : "am";
+// var random = Math.floor(Math.random() * 5) + 1;
+// var randomQoute = "";
 
-if (hours == 13) {
-  hours = 1;
-} else if (hours == 14) {
-  hours = 2
-} else if (hours == 15) {
-  hours = 3
-} else if (hours == 16) {
-  hours = 4
-} else if (hours == 17) {
-  hours = 5
-} else if (hours == 18) {
-  hours = 6
-} else if (hours == 19) {
-  hours = 7
-} else if (hours == 20) {
-  hours = 8
-} else if (hours == 21) {
-  hours = 9
-} else if (hours == 22) {
-  hours = 10
-} else if (hours == 23) {
-  hours = 11
-} else if (hours == 24) {
-  hours = 12
+// var qouteOne = '“Life is fragile and temporary. The faces of today quickly become the faces of the past. Sorrow, pain, and anger... it all fades-except love. Love is forever and there after, even when we\'ve fallen to our graves.”';
+// var qouteTwo = '“Learn from the mistakes of others. You can\'t live long enough to make them all yourself.”';
+// var qouteTree = '“The most important thing to remember is this: to be ready at any moment to give up what you are for what you might become.”'
+// var qouteFour = '“Once you choose hope, anything’s possible.”';
+// var qouteFive = '“Once you replace negative thoughts with positive ones, you\'ll start having positive results.”';
+
+// if (random == 1) {
+//   randomQoute = qouteOne;
+// } else if (random == 2) {
+//   randomQoute = qouteTwo;
+// } else if (random == 3) {
+//   randomQoute = qouteTree;
+// } else if (random == 4) {
+//   randomQoute = qouteFour;
+// } else if (random == 5) {
+//   randomQoute = qouteFive;
+// }
+// document.getElementsByClassName("qoute")[0].innerHTML = randomQoute;
+// console.log(random)
+
+var random = Math.floor(Math.random() * 5) + 1;
+var randomQuote = '';
+
+var quote = {
+  1: '“Life is fragile and temporary. The faces of today quickly become the faces of the past. Sorrow, pain, and anger... it all fades-except love. Love is forever and there after, even when we\'ve fallen to our graves.”',
+  2: '“Learn from the mistakes of others. You can\'t live long enough to make them all yourself.”',
+  3: '“The most important thing to remember is this: to be ready at any moment to give up what you are for what you might become.”',
+  4: '“Once you choose hope, anything’s possible.”',
+  5: '“Once you replace negative thoughts with positive ones, you\'ll start having positive results.”'
 }
 
-document.write('<div class="clock">' + hours + "<span s> : </span>" + minutes + '<sub> ' + amPm + '</sub></div>');
-
-var body = document.querySelector('.clock');
-var darkThemeBtn = document.querySelector('.dark-theme-btn');
-
-darkThemeBtn.addEventListener('click', () => {
-  body.classList.toggle('dark')
-  
-})
+randomQuote = quote[random]
+document.getElementsByClassName('quote')[0].innerHTML = randomQuote;
