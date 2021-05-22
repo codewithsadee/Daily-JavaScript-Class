@@ -1,3 +1,3 @@
-var container = document.getElementById('container').innerHTML += "I'm from javaScript"; //*adding text//
-var home_li = document.getElementsByClassName("home")[0].innerHTML = "I'm from javaScript"; //*replacing text//
-var contact = document.getElementsByTagName("a")[1].innerHTML = "I'm from javaScript"; //*replacing text//
+var container = document.querySelector(".container").innerHTML += "I'm from javaScript"; //* text changing with querySelector //
+var li_tag = document.querySelectorAll("ul li a")[0].innerHTML = "I'm from javaScript"; //* text changing with querySelectorAll //
+var li_tag = document.querySelectorAll("ul li a")[1].innerHTML = "I'm from javaScript"; //* txt changing with querySelectorAll //
