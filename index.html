@@ -6,15 +6,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       /*border: 1px solid;*/
+    }
 
+    body {
+        height: 100vh;
+        width: 100%;
+        background: #bababa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        font-family: arial;
+        font-weight: 600;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 500px;
+        background: #fafaba;
+
+    }
+
+    .clock {
+        border: 1px solid;
+        width: calc(100%/3);
+        height: 100%;
+        font-size: 2.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 </head>
 
 <body>
-  <button class="btn">button 1</button>
-  <button class="btn">button 2</button>
-  <button class="btn">button 3</button>
+    <div class="container">
+        <div class="hours clock"></div>
+        <div class="minutes clock"></div>
+        <div class="seconds clock"></div>
+    </div>
 
-  <script src="./script.js"></script>
+      <script src="./script.js"></script>
 </body>
 
 </html>
