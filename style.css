@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+}
+
+body {
+    background: #2e2e2e;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+   font-size: 5rem; 
+   margin: 0 50px;
+   padding: 0 20px;
+   border: none;
+   cursor: pointer;
+}
+.btn-style {
+    box-shadow: 0 0 20px #ff00;
+}
